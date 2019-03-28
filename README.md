@@ -22,3 +22,4 @@ Projeto feito durante a realização dos curso da carreira desenvolvedor Python
  * set: coleção não ordenada (sem repetição) > usa chaves na declaração
  * dictionary: par chave, valor > {key:value, key2:value2}
  * List Comprehension . Exemplo: letras_acertadas = ["_" for letra in palavra_secreta]
+ * Leitura e escrita de arquivos
