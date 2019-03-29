@@ -1,21 +1,36 @@
 import random
 
-def jogar():
+
+def imprime_mensagem_abertura():
     print("******************************************************")
     print("********** ***** Jogo de adivinhação! ********** *****")
     print("******************************************************")
+
+
+def define_nivel_dificuldade():
+    print("Nivel de dificuldade: (1) - fácil -- (2) - médio -- (3) - difícil ")
+    dificuldade = int(input("Defina a dificuldade:  "))
+    return dificuldade
+
+
+def calcula_numero_tentativas(dificuldade):
+    if (dificuldade == 1):
+        total_de_tentativas = 15
+    elif (dificuldade == 2):
+        total_de_tentativas = 10
+    else:
+        total_de_tentativas = 5
+    return  total_de_tentativas
+
+
+def jogar():
+    imprime_mensagem_abertura()
     pontuacao = 1000
     total_de_tentativas = 0
     numero_secreto = random.randrange(1, 101)
 
-    print("Nivel de dificuldade: (1) - fácil -- (2) - médio -- (3) - difícil ")
-    numero_tentativas = int(input("Defina a dificuldade:  "))
-    if (numero_tentativas == 1):
-        total_de_tentativas = 15
-    elif (numero_tentativas == 2):
-        total_de_tentativas = 10
-    else:
-        total_de_tentativas = 5
+    dificuldade = define_nivel_dificuldade()
+    total_de_tentativas = calcula_numero_tentativas(dificuldade)
 
     # rodada = 1
 
